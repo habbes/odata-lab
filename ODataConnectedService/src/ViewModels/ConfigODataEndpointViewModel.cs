@@ -15,7 +15,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 
 namespace Microsoft.OData.ConnectedService.ViewModels
 {
-    internal class ConfigODataEndpointViewModel : ConnectedServiceWizardPage
+    public class ConfigODataEndpointViewModel : ConnectedServiceWizardPage
     {
         private UserSettings userSettings;
 

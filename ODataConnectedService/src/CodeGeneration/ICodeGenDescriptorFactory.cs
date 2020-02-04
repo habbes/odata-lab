@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 
 namespace Microsoft.OData.ConnectedService.CodeGeneration
 {
-    interface ICodeGenDescriptorFactory
+    public interface ICodeGenDescriptorFactory
     {
         BaseCodeGenDescriptor Create(Version edmxVersion, string metadataUri, ConnectedServiceHandlerContext context, Project project);
     }

@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 
 namespace Microsoft.OData.ConnectedService.ViewModels
 {
-    internal class AdvancedSettingsViewModel : ConnectedServiceWizardPage
+    public class AdvancedSettingsViewModel : ConnectedServiceWizardPage
     {
         public bool UseDataServiceCollection { get; set; }
         public bool UseNamespacePrefix { get; set; }

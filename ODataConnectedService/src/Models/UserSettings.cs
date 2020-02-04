@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 namespace Microsoft.OData.ConnectedService.Models
 {
     [DataContract]
-    internal class UserSettings
+    public class UserSettings
     {
         private const string Name = "Settings";
         private const int MaxMruEntries = 10;

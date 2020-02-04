@@ -15,7 +15,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 
 namespace Microsoft.OData.ConnectedService.CodeGeneration
 {
-    internal class V3CodeGenDescriptor : BaseCodeGenDescriptor
+    public class V3CodeGenDescriptor : BaseCodeGenDescriptor
     {
         public V3CodeGenDescriptor(string metadataUri, ConnectedServiceHandlerContext context, Project project)
             : base(metadataUri, context, project)

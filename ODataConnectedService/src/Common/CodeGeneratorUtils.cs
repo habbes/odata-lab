@@ -6,7 +6,7 @@ using Microsoft.Win32;
 
 namespace Microsoft.OData.ConnectedService.Common
 {
-    internal static class CodeGeneratorUtils
+    public static class CodeGeneratorUtils
     {
         public const string InstallLocationSubKeyName = "InstallLocation";
 
