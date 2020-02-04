@@ -3,7 +3,7 @@
 
 namespace Microsoft.OData.ConnectedService.Templates
 {
-    interface IODataT4CodeGeneratorFactory
+    public interface IODataT4CodeGeneratorFactory
     {
         ODataT4CodeGenerator Create();
     }

@@ -13,7 +13,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 
 namespace Microsoft.OData.ConnectedService.CodeGeneration
 {
-    internal class V4CodeGenDescriptor : BaseCodeGenDescriptor
+    public class V4CodeGenDescriptor : BaseCodeGenDescriptor
     {
         public V4CodeGenDescriptor(string metadataUri, ConnectedServiceHandlerContext context, Project project, IODataT4CodeGeneratorFactory codeGeneratorFactory)
             : base(metadataUri, context, project)

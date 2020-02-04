@@ -5,7 +5,7 @@ using System;
 
 namespace Microsoft.OData.ConnectedService.Models
 {
-    internal class ServiceConfiguration
+    public class ServiceConfiguration
     {
         public string ServiceName { get; set; }
         public string Endpoint { get; set; }
@@ -17,7 +17,7 @@ namespace Microsoft.OData.ConnectedService.Models
         public bool MakeTypesInternal { get; set; }
     }
 
-    internal class ServiceConfigurationV4 : ServiceConfiguration
+    public class ServiceConfigurationV4 : ServiceConfiguration
     {
         public bool EnableNamingAlias { get; set; }
         public bool IgnoreUnexpectedElementsAndAttributes { get; set; }
