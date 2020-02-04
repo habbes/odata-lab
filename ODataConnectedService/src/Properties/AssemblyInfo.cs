@@ -39,4 +39,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("0.3.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
 
-[assembly: InternalsVisibleTo("ODataConnectedService.Tests")]
+//[assembly: InternalsVisibleTo("ODataConnectedService.Tests")]

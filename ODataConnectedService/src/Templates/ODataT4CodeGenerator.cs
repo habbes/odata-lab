@@ -32,7 +32,7 @@ namespace Microsoft.OData.ConnectedService.Templates
     /// Class to produce the template output
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    internal partial class ODataT4CodeGenerator : ODataT4CodeGeneratorBase
+    public partial class ODataT4CodeGenerator : ODataT4CodeGeneratorBase
     {
         /// <summary>
         /// Create the template output
@@ -7152,7 +7152,7 @@ this.Write("End Namespace\r\n");
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    internal class ODataT4CodeGeneratorBase
+    public class ODataT4CodeGeneratorBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
