@@ -11,7 +11,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 namespace Microsoft.OData.ConnectedService
 {
     [ConnectedServiceProviderExport(Constants.ProviderId, SupportsUpdate = true)]
-    internal class ODataConnectedServiceProvider : ConnectedServiceProvider
+    public class ODataConnectedServiceProvider : ConnectedServiceProvider
     {
         public ODataConnectedServiceProvider()
         {

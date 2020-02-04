@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 
 namespace Microsoft.OData.ConnectedService
 {
-    internal class ODataConnectedServiceWizard : ConnectedServiceWizard
+    public class ODataConnectedServiceWizard : ConnectedServiceWizard
     {
         private UserSettings userSettings;
         private ODataConnectedServiceInstance serviceInstance;

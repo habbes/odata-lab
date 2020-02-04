@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.ConnectedServices;
 
 namespace Microsoft.OData.ConnectedService
 {
-    internal class ODataConnectedServiceInstance : ConnectedServiceInstance
+    public class ODataConnectedServiceInstance : ConnectedServiceInstance
     {
         public ServiceConfiguration ServiceConfig { get; set; }
         public string MetadataTempFilePath { get; set; }
