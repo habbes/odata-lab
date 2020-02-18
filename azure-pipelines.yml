@@ -1,6 +1,8 @@
 trigger:
 - master
 
+name: 'ODataConnectedService - Build - Test - Package'
+
 pool:
   vmImage: 'windows-latest'
 
