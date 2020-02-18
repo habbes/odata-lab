@@ -1,0 +1,50 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  sln: '$(Build.SourcesDirectory)\ODataConnectedService\ODataConnectedService.sln'
+  testSln: '$(Build.SourcesDirectory)\ODataConnectedService\ODataConnectedService.Tests.sln'
+
+steps:
+- task: NuGetToolInstaller@0
+  inputs:
+    versionSpec: '>=5.2.0'
+
+- task: NuGetCommand@2
+  displayName: 'Nuget restore - ODataConnectedService.sln'
+  inputs:
+    restoreSolution: '$(sln)'
+
+- task: VSBuild@1
+  displayName: 'Build solution - ODataConnectedService.sln'
+  inputs:
+    solution: '$(sln)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'Nuget restore tests - ODataConnectedServiceTests.sln'
+  inputs:
+    restoreSolution: '$(testSln)'
+
+- task: VSBuild@1
+  displayName: 'Build tests solution - ODataConnectedServiceTests.sln'
+  inputs:
+    solution: '$(testSln)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+
+- task: VSTest@2
+  displayName: 'Run tests'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: '$(Build.SourcesDirectory)\ODataConnectedService\test\ODataConnectedService.Tests\bin\$(BuildConfiguration)\ODataConnectedService.Tests.dll'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    searchFolder:  '$(System.DefaultWorkingDirectory)'
