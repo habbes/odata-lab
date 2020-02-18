@@ -51,10 +51,11 @@ steps:
     searchFolder:  '$(System.DefaultWorkingDirectory)'
 
 - task: EsrpCodeSigning@1
+  displayName: 'ESRP CodeSign - Sign Binaries'
   inputs:
     ConnectedServiceName: "ESRP CodeSigning - OData"
     FolderPath: '$(connectedServiceDir)\src\bin\$(BuildConfiguration)'
-    Pattern: '*.dll,*.exe'
+    Pattern: 'Microsoft.OData.ConnectedService.dll'
     signConfigType: 'inlineSignParams'
     inlineOperation: |
       [
