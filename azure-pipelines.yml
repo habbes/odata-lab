@@ -53,7 +53,7 @@ steps:
 - task: EsrpCodeSigning@1
   inputs:
     ConnectedServiceName: "ESRP CodeSigning - OData"
-    FolderPath: '$(connectedServiceDir)\src\bin\$(BuildConfiguration)\Release'
+    FolderPath: '$(connectedServiceDir)\src\bin\$(BuildConfiguration)'
     Pattern: '*.dll,*.exe'
     signConfigType: 'inlineSignParams'
     inlineOperation: |
